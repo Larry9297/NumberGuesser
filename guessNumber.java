@@ -5,15 +5,15 @@ public class guessNumber{
         public static void main(String [] args){
         Scanner scanner = new Scanner(System.in);
         int numberToGuess;
-        //The number and range start half way from 0-100 which is 50.
-        double currentGuess = 50;
-        double guessFactor = 50;
+        //the halfway point in the range of -100 to 100 is 0..
+        double currentGuess = 0;
+        double guessFactor = 100;
         //User enters a number to be guessed. 
-        System.out.println("Choose a number between 0-100 nonintegers will be truncated");
+        System.out.println("Choose a number between -100 - 100 nonintegers will be truncated");
         //truncates decimals that get entered.
         numberToGuess = (int) (scanner.nextDouble()); 
         //returns an error if number is not in the range of 0-100
-        if (numberToGuess < 0 || numberToGuess > 100) {
+        if (numberToGuess < -100 || numberToGuess > 100) {
             System.out.println("Number not in range.");
             scanner.close();
             return;
