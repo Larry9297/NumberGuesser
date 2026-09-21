@@ -9,16 +9,16 @@ public class guessNumber{
         double currentGuess = 0;
         double guessFactor = 100;
         //User enters a number to be guessed. 
-        System.out.println("Choose a number between -100 - 100 nonintegers will be truncated");
+        System.out.println("Choose a number between -100 to 100 nonintegers will be truncated");
         //truncates decimals that get entered.
         numberToGuess = (int) (scanner.nextDouble()); 
         //returns an error if number is not in the range of 0-100
         if (numberToGuess < -100 || numberToGuess > 100) {
-            System.out.println("Number not in range.");
+            System.out.println("Number not in range."); 
             scanner.close();
             return;
         }
-        System.out.println("Ok! I'll guess it!");
+        System.out.println("Ok! I'll guess it!"); 
         //loop that guesses the number. It adds a number that's half the possible range each time until it gets to the correct number.
         while (numberToGuess != currentGuess){
             guessFactor = guessFactor/2; //guess number gets halved each time.
